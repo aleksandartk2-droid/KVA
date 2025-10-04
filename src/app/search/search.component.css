@@ -1,0 +1,141 @@
+html, body {
+    height: 100%;
+    background-color: #1c1c2e;
+    color: #e0e0e0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.wrapper {
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    background-color: #141421;
+    border: 1px solid #2a2a3d;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    caret-color: #828686;
+}
+
+.search-bar::placeholder {
+    color: #888ca9;
+    opacity: 0.7;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #828686;
+    box-shadow: 0 0 6px #828686;
+}
+
+.container {
+    display: grid;
+    gap: 40px;
+}
+
+.example-card {
+    display: flex;
+    align-items: center;
+    background: #141421;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 12px;
+    width: 100%;
+}
+
+.example-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(255, 0, 200, 0.3);
+}
+
+.image-container {
+    flex-shrink: 0;
+    width: 120px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 15px;
+    border: 2px solid #828686;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #828686;
+    text-shadow: 0 0 3px #828686;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #3d0d32;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #999;
+    margin-top: auto;
+}
+
+.card-footer a {
+    text-decoration: none;
+    color: #828686;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card-footer a:hover {
+    color: #3d0d32;
+    text-shadow: 0 0 5px #3d0d32;
+}
+
+@media (max-width: 600px) {
+    .example-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+

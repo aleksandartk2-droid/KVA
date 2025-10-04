@@ -1,0 +1,115 @@
+html, body {
+    height: 100%;
+    background-color: #1c1c2e; /* svetlija tamna nijansa */
+    color: #f0f0f0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-image: linear-gradient(to bottom, #2a2a3d, #1c1c2e);
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+}
+.example-card {
+    background: #141414;
+    border: 2px solid #828686;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 0 15px #828686;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.example-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #3d0d32;
+}
+.card-header {
+    padding: 12px;
+    background-color: #1e1e1e;
+}
+.title, .subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #828686;
+    text-shadow: 0 0 3px #828686;
+}
+.subtitle {
+    font-size: 13px;
+    color: #3d0d32;
+    text-shadow: 0 0 2px #3d0d32;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+}
+.image-container img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/3;
+    filter: grayscale(20%) brightness(1.1);
+    transition: filter 0.3s ease;
+}
+.image-container:hover img {
+    filter: grayscale(0%) brightness(1.3);
+}
+.image-container .description {
+    font-size: 13px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+.image-container:hover .description {
+    opacity: 1;
+    visibility: visible;
+}
+.card-footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: auto;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1a1a1a, #222233);
+}
+.loading {
+    text-align: center;
+    width: 700px;
+    height: 300px;
+    color: #828686;
+    font-size: 2rem;
+}
+.wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+ng-container {
+    text-align: center;
+}

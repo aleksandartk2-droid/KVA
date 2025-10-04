@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <mat-card>
+    <mat-card-header>
+      <h1>Registracija</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [(ngModel)]="email" placeholder="Unesite email..." />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Lozinka</mat-label>
+        <input type="password" matInput [(ngModel)]="password" placeholder="Unesite lozinku..." />
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onRegister()">
+        <i class="fa-solid fa-user-plus"></i> Registruj se
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

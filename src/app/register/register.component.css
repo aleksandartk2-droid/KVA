@@ -1,0 +1,42 @@
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1e1e2f;
+  border-radius: 15px;
+  text-align: center;
+  width: 600px;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  border: 1px solid #828686;
+}
+
+.register-wrapper form div {
+  margin-bottom: 10px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #333;
+  margin-top: 10px;
+}
+
+mat-card-actions button {
+  background-color: #828686;
+  color: #000;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+mat-card-actions button:hover {
+  background-color: #3d0d32;
+  color: white;
+  box-shadow: 0 0 10px #3d0d32;
+}

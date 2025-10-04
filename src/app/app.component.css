@@ -1,0 +1,47 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e2f;
+    padding: 15px 30px;
+    box-shadow: 0 0 12px #828686;
+    border-bottom: 2px solid #3d0d32;
+}
+
+.nav-bar {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-content a {
+    color: #828686;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-content a:hover {
+    color: #3d0d32;
+    text-shadow: 0 0 5px #3d0d32;
+}
+
+.spacer {
+    flex: 1;
+}

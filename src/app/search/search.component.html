@@ -1,0 +1,29 @@
+<div class="wrapper" *ngIf="filteredDataSource">
+  <input type="text" placeholder="Pretrazite filmove po imenu..." [(ngModel)]="searchQuery" (input)="onSearchChange()" class="search-bar" />
+  <input type="text" placeholder="Pretrazite filmove po trajanju..." [(ngModel)]="searchQuery" (input)="onSearchChangeTrajanje()" class="search-bar" />
+
+  <div class="container">
+    <div class="example-card" *ngFor="let movie of filteredDataSource">
+      <div class="image-container">
+        <img [src]="movie.poster || 'assets/default-movie.jpg'" alt="{{ movie.title }}" />
+      </div>
+      <div class="card-content">
+        <div class="title">{{ movie.title }}</div>
+        <div class="subtitle">
+          <span *ngFor="let genre of movie.movieGenres; let i = index">
+            {{ genre.genre.name }}{{ i < movie.movieGenres.length - 1 ? ', ' : '' }}
+          </span>
+        </div>
+        <div class="description">{{ movie.shortDescription }}</div>
+        <div class="card-footer">
+          <span>{{ utils.formatDate(movie.startDate) }}</span>
+          <a mat-button [routerLink]="['/details/', movie.movieId]">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Detalji
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-loading *ngIf="!filteredDataSource"/>
